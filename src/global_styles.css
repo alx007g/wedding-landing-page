@@ -1,0 +1,108 @@
+body, html {
+  font-family: 'Great Vibes', cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  padding: 80px 40px;
+  background-size: cover;
+  margin-bottom: 60px;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.section-content {
+  position: relative;
+  z-index: 2;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: all 0.3s;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.quote {
+  font-style: italic;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: #fff;
+}
+
+h1, h2, h3, p {
+  color: #fff;
+}
+
+h1 {
+  font-size: 6em;
+  color: #ffd700; /* Dorado para los nombres principales */
+}
+
+h2 {
+  font-size: 5em;
+  color: #ff69b4; /* Rosa para los títulos de sección */
+}
+
+h3 {
+  font-size: 4em;
+  color: #40e0d0; /* Turquesa para subtítulos */
+}
+
+p {
+  font-size: 2em;
+  line-height: 1.6;
+}
+
+.bible-verse {
+  font-style: italic;
+  color: #f0f0f0;
+}
+
+.invitation {
+  font-size: 2.2em;
+  color: #f0f0f0;
+}
+
+.family-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.family-column {
+  width: 48%;
+  margin-bottom: 20px;
+}
