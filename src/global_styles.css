@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   background-color: #000;
-  color: #fff;
+  color: #D9D1C7; /* Usar el gris claro para el texto por defecto */
 }
 
 .container {
@@ -12,8 +12,13 @@ body, html {
   padding: 20px;
 }
 
+.container-names {
+  width: 100%;
+  /* padding: 20px 10%; */
+}
+
 .section {
-  padding: 80px 40px;
+  /* padding: 80px 40px; */
   background-size: cover;
   margin-bottom: 60px;
   background-position: center;
@@ -40,12 +45,12 @@ body, html {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  color: #fff;
+  color: #D9D1C7; /* Gris claro */
   text-decoration: none;
   font-size: 1.5em;
   transition: all 0.3s;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-top: 2px solid #D9D1C7;
+  border-bottom: 2px solid #D9D1C7;
   width: 100%;
   box-sizing: border-box;
 }
@@ -57,43 +62,47 @@ body, html {
 .quote {
   font-style: italic;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 4em;
   margin: 20px 0;
-  color: #fff;
+  color: #B79FC5; /* Lavanda claro para las citas */
 }
 
 h1, h2, h3, p {
-  color: #fff;
+  color: #D9D1C7; /* Gris claro para el texto general */
 }
 
 h1 {
   font-size: 6em;
-  color: #ffd700; /* Dorado para los nombres principales */
+  /* Morado oscuro para los nombres principales */
+  /* color: #3F2D54;  */
+  color: #9d8919; 
 }
 
 h2 {
   font-size: 5em;
-  color: #ff69b4; /* Rosa para los títulos de sección */
+  color: #9673A6; /* Lavanda más oscuro para los títulos de sección */
 }
 
 h3 {
   font-size: 4em;
-  color: #40e0d0; /* Turquesa para subtítulos */
+  color: #B79FC5; /* Lavanda claro para subtítulos */
 }
 
 p {
   font-size: 2em;
   line-height: 1.6;
+  color: #D9D1C7; /* Gris claro para el texto de los párrafos */
 }
 
 .bible-verse {
   font-style: italic;
-  color: #f0f0f0;
+  color: #B79FC5; /* Lavanda claro para el versículo de la Biblia */
 }
 
 .invitation {
-  font-size: 2.2em;
-  color: #f0f0f0;
+  font-size: 5em;
+  text-align: center;
+  color: #D9D1C7; /* Gris claro para el mensaje de invitación */
 }
 
 .family-columns {
@@ -105,4 +114,18 @@ p {
 .family-column {
   width: 48%;
   margin-bottom: 20px;
+}
+
+.section {
+  border-radius: 50px;
+  box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.5);
+  overflow: hidden; 
+  margin-left: 6%; 
+  margin-right: 6%;
+}
+
+.map {
+  border-radius: 25px;
+  box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.5);
+  overflow: hidden; 
 }

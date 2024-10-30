@@ -1,0 +1,46 @@
+<div class="invitation-container" [class.opened]="isOpen">
+    <div class="card" [class.card-opened]="isOpen">
+      <div class="card-front">
+        <div class="monogram">
+          <span>A</span>
+          <span class="ampersand">&</span>
+          <span>A</span>
+        </div>
+        <div class="papersheet" #papersheet>
+          <div class="triangle" #triangle></div>
+        </div>
+        <div class="eyelet" #eyelet>
+          <div class="eyelet-ring"></div>
+          <div class="eyelet-inner"></div>
+        </div>
+        <div
+          class="pull-tab"
+          (click)="openCard()"
+          [class.hidden]="isOpen"
+          (mouseenter)="onHover(true)"
+          (mouseleave)="onHover(false)"
+        >
+          <div class="tassel">
+            <div class="tassel-knot"></div>
+            <div class="tassel-head"></div>
+            <div class="tassel-threads">
+              <div class="thread" *ngFor="let i of [1,2,3,4,5,6,7,8]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper" [class.visible]="isOpen">
+      <div class="paper" [class.pulled]="isOpen">
+        <div class="paper-content">
+          <app-header></app-header>
+          <app-invitation></app-invitation>
+          <app-info></app-info>
+          <app-family></app-family>
+          <app-confirmation></app-confirmation>
+          <app-location></app-location>
+        </div>
+      </div>
+    </div>
+  </div>
+  
