@@ -1,51 +1,55 @@
 header {
-  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-  
-  display: flex; /* Habilita el uso de flexbox */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Alinea el texto al centro */
-  
-}
-h1 {
-  margin-bottom: 20px;
-}
-.bible-verse {
-  margin-bottom: 20px;
-}
-
-.names-header {
-  /* display: flex; */
-  /* justify-content: space-between;  */
-  margin-bottom: 20px; /* Ajusta la separación vertical si es necesario */
-}
-
-.name-left,
-.name-center,
-.name-right {
-  width: 100%; /* Asegura que ambos ocupen toda la línea */
-}
-
-.name-center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.name-left {
-  text-align: left; /* Alinea a la izquierda */
-}
+/* h1 {
+  margin-bottom: 20px;
+} */
 
-.name-right {
-  text-align: right; /* Alinea a la derecha */
+.names-header {
+  margin-bottom: 20px;
 }
 
 .names-header h1 {
-  font-size: 9rem; 
-  margin: 0; 
+  font-size: 6vw; /* Usamos vw para que el tamaño de fuente sea adaptable */
+  margin: 0;
 }
 
 .names-wedding {
   text-align: center;
   position: absolute;
-  top: 240px;
+  top: 30vh; /* Usamos vh para que la posición sea proporcional a la altura de la pantalla */
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 80vh; /* Reducimos la altura para pantallas medianas */
+  }
+
+  .names-header h1 {
+    font-size: 7vw; /* Ajustamos el tamaño de fuente para pantallas medianas */
+  }
+
+  .names-wedding {
+    top: 25vh; /* Ajustamos la posición del texto */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 70vh; /* Reducimos aún más la altura para pantallas pequeñas */
+  }
+
+  .names-header h1 {
+    font-size: 10vw; /* Reducimos el tamaño de fuente para pantallas pequeñas */
+  }
+
+  .names-wedding {
+    top: 25vh; /* Ajustamos la posición del texto */
+  }
 }

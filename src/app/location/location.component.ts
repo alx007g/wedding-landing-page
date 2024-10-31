@@ -26,6 +26,10 @@ import { Component } from '@angular/core';
     p {
       margin-bottom: 30px;
     }
+    iframe {
+      margin:4vw;
+      width: 80%;
+    }
   `]
 })
 export class LocationComponent {}

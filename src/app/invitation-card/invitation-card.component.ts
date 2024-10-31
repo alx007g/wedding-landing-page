@@ -7,11 +7,12 @@ import { HeaderComponent } from '../header/header.component';
 import { InfoComponent } from '../info/info.component';
 import { InvitationComponent } from '../invitation/invitation.component';
 import { LocationComponent } from '../location/location.component';
+import { PresentsTableComponent } from '../presents-table/presents-table.component';
 
 @Component({
   selector: 'app-invitation-card',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, InfoComponent, FamilyComponent, ConfirmationComponent, InvitationComponent, LocationComponent, InvitationCardComponent],
+  imports: [CommonModule, HeaderComponent, InfoComponent, FamilyComponent, ConfirmationComponent, InvitationComponent, LocationComponent, InvitationCardComponent, PresentsTableComponent],
   templateUrl: './invitation-card.component.html',
   styleUrl: './invitation-card.component.css',
   // animations: [

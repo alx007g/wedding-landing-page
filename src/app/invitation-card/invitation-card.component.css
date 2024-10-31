@@ -1,350 +1,273 @@
 .invitation-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .invitation-container.opened {
-    height: auto;
-    min-height: 100vh;
-    position: relative;
-    overflow-y: auto;
-  }
-
-  .card {
-    position: relative;
-    width: 500px;
-    height: 700px;
-    margin-top: 2rem;
-    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 2;
-  }
-
-  .card-opened {
-    transform: scale(0.8) translateY(-20%);
-    position: sticky;
-    top: 2rem;
-
-    transform: translateY(-150vh) scale(0.7);
-  opacity: 0;
-  }
-
-  .card-front {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(145deg, #e2d3b3, #d4b878);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    animation: shimmer 3s infinite;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-  }
-
-  .monogram {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Great Vibes', cursive;
-    font-size: 120px;
-    background: linear-gradient(45deg, #ffd700, #b8860b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    transform: rotateX(180deg);
-  }
-
-  .ampersand {
-    margin: 0 20px;
-    font-size: 100px;
-  }
-
-  .papersheet {
-    background:#d9d1c7;;
-    position: absolute;
-    bottom: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-bottom: 5px solid transparent;
-    width: 95%;
-  }
-
-  .triangle {
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 50px solid ;
-    z-index: 1;
-  }
-
-  .papersheet.hovered {
-    bottom: -12px;
-    height: 20px;
-  }
-  
-  .triangle.hovered {
-    bottom: 16px;
-  }
-
-
-.eyelet.hovered {
-    transform: translateX(-50%) translateY(30px); /* Mueve hacia abajo 50px */
-    transition: transform 0.3s ease; /* Transición suave */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
-/* Estilos originales */
+
+.invitation-container.opened {
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+  overflow-y: auto;
+}
+
+.card {
+  position: relative;
+  width: 90vw;
+  max-width: 500px;
+  height: 90vh;
+  max-height: 700px;
+  margin-top: 2rem;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.card-opened {
+  transform: scale(0.8) translateY(-20%);
+  position: sticky;
+  top: 2rem;
+  opacity: 0;
+}
+
+.card-front {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #e2d3b3, #d4b878);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: shimmer 3s infinite;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 4vw;
+  text-align: center;
+  max-font-size: 120px;
+  background: linear-gradient(45deg, #ffd700, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  /* transform: rotateX(180deg); */
+}
+
+.ampersand {
+  margin: 0 20px;
+  font-size: 12vw;
+}
+
+.papersheet {
+  background: #d9d1c7;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  height: 5px;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid;
+  z-index: 1;
+}
+
 .eyelet {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
-    z-index: 3;
-    transition: transform 0.3s ease; /* Permite una transición suave */
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  z-index: 3;
+  transition: transform 0.3s ease;
 }
 
 .eyelet-ring {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #b8860b, #ffd700);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #b8860b, #ffd700);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .eyelet-inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 60%;
-    border-radius: 50%;
-    background: #000;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-  /* .paper-peek {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 40px;
-    background: linear-gradient(180deg, #1a1a1a, #000);
-    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-    transition: all 0.3s ease;
-  } */
+.pull-tab {
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all 0.1s ease;
+  z-index: 2;
+}
 
-  .pull-tab {
-      position: absolute;
-      bottom: -90px;
-      left: 50%;
-      transform: translateX(-50%);
-      cursor: pointer;
-      transition: all 0.1s ease;
-      z-index: 2;
-    }
+.tassel {
+  position: relative;
+  width: 60px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
 
-    .pull-tab.hidden {
-      opacity: 0;
-      transform: translateX(-50%) translateY(100px);
-    }
+.tassel-knot {
+  width: 4px;
+  height: 30px;
+  background: #ffd700;
+  margin-bottom: -1px;
+}
 
-    /* .pull-tab:hover {
-      transform: translateX(-50%) translateY(12px);
-    } */
+.tassel-head {
+  width: 30px;
+  height: 20px;
+  background: #ffd700;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
 
-    .pull-tab:hover .tassel {
-        transform: scaleY(1.4); /* Esto aumentará el tamaño hacia abajo en 40% */
-        transform-origin: top; /* Hace que el crecimiento sea hacia abajo */
-        transition: transform 0.3s ease; /* Transición suave */
-    }
-    
-    .pull-tab:hover .tassel-knot {
-        transform: translateX(-50%) translateY(12px); /* Activa el movimiento */
-        height: 80px;
-    }
-    
-    .pull-tab:hover .paper-peek {
-        transform: translateX(-50%) translateY(-5px);
-    }
-    
-     /* Define el efecto hover en .pull-tab para mover .eyelet hacia abajo */
-    .pull-tab:hover .eyelet {
-       top: 0;
-    }
+.tassel-threads {
+  position: relative;
+  width: 60px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
 
-    .tassel {
-        position: relative;
-        width: 60px;
-        height: 120px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: transform 0.3s ease; /* Transición para que el cambio de tamaño sea suave */
-    }
+.thread {
+  width: 4px;
+  height: 100%;
+  background: #ffd700;
+  border-radius: 2px;
+  transform-origin: top;
+  animation: swayThread 3s ease-in-out infinite;
+}
 
-  .tassel-knot {
-    width: 4px;
-    height: 30px;
-    background: #ffd700;
-    margin-bottom: -1px;
+.thread:nth-child(odd) {
+  animation-delay: -1.5s;
+}
+
+.content-wrapper {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.content-wrapper.visible {
+  visibility: visible;
+  position: relative;
+  margin-top: -600px;
+}
+
+.paper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1a1a1a, #000);
+  transform: translateY(-100%);
+  transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 5px solid #ffd700;
+}
+
+.paper.pulled {
+  transform: translateY(0);
+}
+
+.paper-content {
+  padding: calc(600px + 4rem) 0 4rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transition-delay: 1s;
+}
+
+.pulled .paper-content {
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background: linear-gradient(145deg, #e2d3b3, #d4b878);
   }
+  50% {
+    background: linear-gradient(145deg, #d4b878, #e2d3b3);
+  }
+}
 
-  .tassel-head {
-    width: 30px;
-    height: 20px;
-    background: #ffd700;
-    border-radius: 15px 15px 0 0;
-    position: relative;
+@keyframes swayThread {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90vw;
+    height: 80vh;
+  }
+  
+  .monogram {
+    font-size: 12vw;
+  }
+  
+  .ampersand {
+    font-size: 15vw;
   }
 
   .tassel-threads {
-    position: relative;
-    width: 60px;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 95vw;
+    height: 85vh;
   }
 
-  .thread {
-    width: 4px;
-    height: 100%;
-    background: #ffd700;
-    border-radius: 2px;
-    transform-origin: top;
-    animation: swayThread 3s ease-in-out infinite;
-  }
-
-  .thread:nth-child(odd) {
-    animation-delay: -1.5s;
-  }
-
-  .content-wrapper {
-    position: absolute;
-    width: 100%;
-    min-height: 100vh;
-    visibility: hidden;
-    z-index: 1;
-  }
-
-  .content-wrapper.visible {
-    visibility: visible;
-    position: relative;
-    margin-top: -600px;
-  }
-
-  .paper {
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(180deg, #1a1a1a, #000);
-    transform: translateY(-100%);
-    transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border-top: 5px solid #ffd700;
-  }
-
-  .paper.pulled {
-    transform: translateY(0);
-  }
-
-  .paper-content {
-    padding: calc(600px + 4rem) 0 4rem;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    transition-delay: 1s;
-  }
-
-  .pulled .paper-content {
-    opacity: 1;
-  }
-
-  @keyframes shimmer {
-    0%, 100% {
-      background: linear-gradient(145deg, #e2d3b3, #d4b878);
-    }
-    50% {
-      background: linear-gradient(145deg, #d4b878, #e2d3b3);
-    }
-  }
-
-  @keyframes swayThread {
-    0%, 100% {
-      transform: rotate(-5deg);
-    }
-    50% {
-      transform: rotate(5deg);
-    }
-  }
-
-
-
-
-  /* Ajustes para que content-wrapper ocupe toda la pantalla */
-/* .content-wrapperd {
-    color: red;
-    position: fixed;
-    top: 0;
-    left: 0; 
-    width: 100vh;
-    height: 100vh;
-    visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8); 
-    z-index: 100; 
-    transition: visibility 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-  } */
-  
-  /* .content-wrapper.visible {
-    visibility: visible;
-    opacity: 1;
+  .monogram {
+    font-size: 25vw;
   }
   
-  
-  .paper {
-    width: 100%;
-    min-height: 100vh;
-    max-width: 800px; 
-    background: linear-gradient(180deg, #1a1a1a, #000);
-    transform: translateY(-100%);
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-    border-top: 5px solid #ffd700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .ampersand {
+    font-size: 20vw;
   }
-  
-  .paper.pulled {
-    transform: translateY(0);
-  }
-  
-  .paper-content {
-    padding: 2rem; 
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    transition-delay: 1s;
-  }
-  
-  .pulled .paper-content {
-    opacity: 1;
-  } */
+}
