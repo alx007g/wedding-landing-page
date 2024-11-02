@@ -15,8 +15,9 @@ header {
 }
 
 .names-header h1 {
-  font-size: 6vw; /* Usamos vw para que el tamaño de fuente sea adaptable */
+  font-size: 4vw; /* Usamos vw para que el tamaño de fuente sea adaptable */
   margin: 0;
+  margin-top: -20px;
 }
 
 .names-wedding {

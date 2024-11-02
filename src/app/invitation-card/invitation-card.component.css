@@ -79,6 +79,8 @@
   transform: translateX(-50%);
   width: 95%;
   height: 5px;
+  border-top: 1px solid #c0ac80;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .triangle {
@@ -90,7 +92,7 @@
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 50px solid;
+  border-bottom: 50px solid ;
   z-index: 1;
 }
 
@@ -126,6 +128,20 @@
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
+.eyelet.hovered {
+  transform: translateX(-50%) translateY(30px); /* Mueve hacia abajo 50px */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.papersheet.hovered {
+  bottom: -12px;
+  height: 20px;
+}
+
+.triangle.hovered {
+  bottom: 16px;
+}
+
 .pull-tab {
   position: absolute;
   bottom: -90px;
@@ -154,8 +170,14 @@
 }
 
 .tassel-head {
-  width: 30px;
+  width: 35px;
   height: 20px;
+  border-bottom: 3px solid #c9ae70;
+  font-size: 0.5vw;
+  color: #cfa306;
+  align-content: center;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
   background: #ffd700;
   border-radius: 15px 15px 0 0;
   position: relative;
@@ -163,21 +185,27 @@
 
 .tassel-threads {
   position: relative;
-  width: 60px;
+  /* width: 60px; */
   height: 80px;
   display: flex;
   justify-content: space-between;
 }
 
 .thread {
-  width: 4px;
+  width: 4px;  
   height: 100%;
   background: #ffd700;
-  border-radius: 2px;
+  border-radius: 10px;
   transform-origin: top;
   animation: swayThread 3s ease-in-out infinite;
 }
 
+.thread:first-child {
+  border-radius: 25px 0px 10px 10px;
+}
+.thread:last-child {
+  border-radius: 0px 25px 10px 10px;
+}
 .thread:nth-child(odd) {
   animation-delay: -1.5s;
 }
@@ -270,4 +298,24 @@
   .ampersand {
     font-size: 20vw;
   }
+}
+
+.pull-tab:hover .tassel {
+  transform: scaleY(1.4); /* Esto aumentará el tamaño hacia abajo en 40% */
+  transform-origin: top; /* Hace que el crecimiento sea hacia abajo */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.pull-tab:hover .tassel-knot {
+  transform: translateY(14px); /* Activa el movimiento */
+  height: 80px;
+}
+
+.pull-tab:hover .paper-peek {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Define el efecto hover en .pull-tab para mover .eyelet hacia abajo */
+.pull-tab:hover .eyelet {
+ top: 0;
 }
