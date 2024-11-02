@@ -1,17 +1,27 @@
-import { Component } from '@angular/core';
-import { bootstrapApplication } from '@angular/platform-browser';
-import { HeaderComponent } from './app/header/header.component';
-import { InfoComponent } from './app/info/info.component';
-import { FamilyComponent } from './app/family/family.component';
-import { ConfirmationComponent } from './app/confirmation/attendance-confirmation.component';
-import { InvitationComponent } from './app/invitation/invitation.component';
-import { LocationComponent } from './app/location/location.component';
+import { Component } from "@angular/core";
+import { bootstrapApplication } from "@angular/platform-browser";
+import { HeaderComponent } from "./app/header/header.component";
+import { InfoComponent } from "./app/info/info.component";
+import { FamilyComponent } from "./app/family/family.component";
+import { ConfirmationComponent } from "./app/confirmation/attendance-confirmation.component";
+import { InvitationComponent } from "./app/invitation/invitation.component";
+import { LocationComponent } from "./app/location/location.component";
 import { InvitationCardComponent } from "./app/invitation-card/invitation-card.component";
+import { RouterModule } from "@angular/router";
+import { AppRoutingModule } from "./app.routing";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   standalone: true,
-  imports: [HeaderComponent, InfoComponent, FamilyComponent, ConfirmationComponent, InvitationComponent, LocationComponent, InvitationCardComponent],
+  imports: [
+    HeaderComponent,
+    InfoComponent,
+    FamilyComponent,
+    ConfirmationComponent,
+    InvitationComponent,
+    LocationComponent,
+    InvitationCardComponent,
+  ],
   template: `
     <div class="wedding-page">
       <app-invitation-card></app-invitation-card>
@@ -23,12 +33,14 @@ import { InvitationCardComponent } from "./app/invitation-card/invitation-card.c
       <app-location></app-location> -->
     </div>
   `,
-  styles: [`
-    .wedding-page {
-      background-color: #f8f8f8;
-    }
-  `]
+  styles: [
+    `
+      .wedding-page {
+        background-color: #f8f8f8;
+      }
+    `,
+  ],
 })
 export class App {}
 
-bootstrapApplication(App);
+bootstrapApplication(App, { providers: [AppRoutingModule] });

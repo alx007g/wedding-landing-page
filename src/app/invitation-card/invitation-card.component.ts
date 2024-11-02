@@ -16,7 +16,9 @@ import { LocationComponent } from "../location/location.component";
 import { PresentsTableComponent } from "../presents-table/presents-table.component";
 import { YouTubePlayer } from "@angular/youtube-player";
 import { Fireworks } from 'fireworks-js';
-
+import { GuestService } from "./guest.service";
+import { ActivatedRoute, RouterModule, Routes } from "@angular/router";
+import { RouterTestingModule } from "@angular/router/testing";
 
 @Component({
   selector: "app-invitation-card",
@@ -32,22 +34,24 @@ import { Fireworks } from 'fireworks-js';
     InvitationCardComponent,
     PresentsTableComponent,
     YouTubePlayer,
+    RouterTestingModule
   ],
   templateUrl: "./invitation-card.component.html",
   styleUrl: "./invitation-card.component.css",
-  // animations: [
-  //   trigger('fadeOut', [
-  //     state('visible', style({ opacity: 1 })),
-  //     state('hidden', style({ opacity: 0 })),
-  //     transition('visible => hidden', [
-  //       animate('1s ease-out')
-  //     ])
-  //   ])
-  // ]
 })
 export class InvitationCardComponent implements OnInit, AfterViewInit {
+  
+  public uuid = '';
+  public guest = '';
+  public guestNumber = 1
 
   fireworks: Fireworks | null = null;
+  private guestId:string|null='';
+
+  constructor(private guestService:GuestService, 
+      private route: ActivatedRoute){
+  }
+
   ngAfterViewInit() {
     const headerElement = document.querySelector('.section');
     headerElement?.classList.add('fade-in');
@@ -55,7 +59,15 @@ export class InvitationCardComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {   
-   
+    this.route.queryParamMap.subscribe(params => {
+      this.guestId = params.get('guestId');
+      console.log(this.guestId);
+      const guest = this.guestService.findGuestByUuid(this.guestId);
+      this.guest = guest.guestName;
+      this.guestNumber = guest.guestNumber;
+      
+    });
+    
   }
 
   isOpen = false;

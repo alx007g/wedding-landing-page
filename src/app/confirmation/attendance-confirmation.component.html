@@ -4,6 +4,9 @@
       <h2>¡Sin ti no serà igual!</h2>
       <p>Queremos que el dia de Nuestra Boda sea un día inolvidable.</p>
       <p>Por ello estamos invitando a Nuestros Amigos, queremos que al recordar este dia tú estés en nuestros recuerdos.</p>
-      <a href="#" class="btn">Confirmar Asistencia</a>
+      <a href="#" class="btn">Confirmar Asistencia 
+        ({{ guestNumber }} 
+        {{ guestNumber | i18nPlural: { '=0': 'ninguna persona', '=1': ' persona', 'other': '# personas' } }})
+      </a>
     </div>
   </section>

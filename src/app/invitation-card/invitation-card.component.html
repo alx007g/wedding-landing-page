@@ -3,7 +3,7 @@
   <div class="card" [class.card-opened]="isOpen">
     <div class="card-front">
       <div class="monogram">
-        <span>Walter Pisquiy</span>
+        <span>{{guest}}</span>
       </div>
       <div class="papersheet" #papersheet>
         <div class="triangle" #triangle></div>
@@ -48,7 +48,7 @@
         <app-invitation></app-invitation>
         <app-info></app-info>
         <app-family></app-family>
-        <app-confirmation></app-confirmation>
+        <app-confirmation [guestNumber]="guestNumber"></app-confirmation>
         <app-presents-table></app-presents-table>
         <app-location></app-location>
       </div>
