@@ -12,6 +12,21 @@ export class GuestService {
 
   private guests: Guest[] = [
     {
+        uuid: "d7f7f7a3-6bfb-4a88-8df7-3e4e3d3a0b1e",
+        guestName: "Lesster Escalante",
+        guestNumber: 1,
+      },
+      {
+        uuid: "d2f2f2a3-6bfb-4a88-8df7-3e4e3d3a0b1e",
+        guestName: "Kevin Itzep",
+        guestNumber: 1,
+      },
+      {
+        uuid: "d3f3f3a3-6bfb-4a88-8df7-3e4e3d3a0b1e",
+        guestName: "Kevin Rivas",
+        guestNumber: 1,
+      },
+    {
       uuid: "d1f1f1a3-6bfb-4a88-8df7-3e4e3d3a0b1e",
       guestName: "Cristian Nimatuj & Olga Nimatuj",
       guestNumber: 2,
