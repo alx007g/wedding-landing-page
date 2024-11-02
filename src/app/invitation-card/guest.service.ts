@@ -13,12 +13,12 @@ export class GuestService {
   private guests: Guest[] = [
     {
       uuid: "d1f1f1a3-6bfb-4a88-8df7-3e4e3d3a0b1e",
-      guestName: "Cristian Nimatuj",
+      guestName: "Cristian Nimatuj & Olga Nimatuj",
       guestNumber: 2,
     },
     {
       uuid: "4f5b3d8a-2d9f-49e2-9a1a-134ad76d15e4",
-      guestName: "Hugo Escalante",
+      guestName: "Hugo Escalante y Sra.",
       guestNumber: 2,
     },
     {
@@ -38,12 +38,12 @@ export class GuestService {
     },
     {
       uuid: "8e3f5b4d-6f1b-4d5b-b8d8-4e5d3e9f8a3f",
-      guestName: "Estuardo Vasquez",
+      guestName: "Estuardo Vasquez y Sra.",
       guestNumber: 2,
     },
     {
       uuid: "9d3b6a2f-8d1e-4e4b-b8e9-5d3a7e1f6b8e",
-      guestName: "Marcela Cano",
+      guestName: "Kerin Medina y Sra.",
       guestNumber: 2,
     },
     {
@@ -53,13 +53,8 @@ export class GuestService {
     },
     {
       uuid: "e2d3f5b4-6a9f-4b8a-a8d8-2f5d3b6e1a8c",
-      guestName: "Josafat Sosa",
+      guestName: "Josafat Sosa y Sra.",
       guestNumber: 2,
-    },
-    {
-      uuid: "c1f2b7a3-9e4d-4f6b-9d8e-3a5d6f8b2d4e",
-      guestName: "Amigas mama",
-      guestNumber: 7,
     },
     {
       uuid: "d9f7e3a1-4d6f-4e2b-a8b9-5f2d3c1b9d3e",
@@ -77,121 +72,116 @@ export class GuestService {
       guestNumber: 2,
     },
     {
-      uuid: "e8d2f3b4-5a9f-4c7e-a8b1-7f3e1a6d4c9f",
-      guestName: "Familia",
-      guestNumber: 11,
-    },
-    {
       uuid: "c2f5a9d1-6b7e-4e8f-9a3b-1f6d8e3c5b9f",
       guestName: "Hugo Pastor",
       guestNumber: 1,
     },
     {
       uuid: "f7e1c9a6-3b5e-4a9d-8d9f-2f4d6e1a7b3f",
-      guestName: "Leandra Sosa",
+      guestName: "Cristian Soberanis y Sra.",
       guestNumber: 2,
     },
-    //
+    
     {
-      uuid: "f1b3e5d7-3b7e-4c8f-8d3e-2a4f6e9d7a2c",
-      guestName: "Sr. Raul Macario y Sra.",
-      guestNumber: 1,
+        uuid: "03471684-271e-441e-b36e-5a3844cbe365",
+        guestName: "Sr. Raul Macario y Sra.",
+        guestNumber: 2
     },
     {
-      uuid: "e2c9f3a7-5b4e-4d9a-8f7e-3a5d1c9f8b3d",
-      guestName: "Sr. Eduardo Macario Sra. é hijas",
-      guestNumber: 5,
+        uuid: "c99f61e0-bf04-459c-93b5-0f42fc8cb1f0",
+        guestName: "Sr. Eduardo Macario Sra. e hijas",
+        guestNumber: 0
     },
     {
-      uuid: "d3e1f7a9-4c2f-4b8e-9d1e-7a5b6e3f4c5a",
-      guestName: "Sra. Claudia Macario é hija",
-      guestNumber: 3,
+        uuid: "ba8201c5-c08c-4591-98d6-1f3463497c1e",
+        guestName: "Sra. Claudia Macario e hija",
+        guestNumber: 0
     },
     {
-      uuid: "b9f7d2e6-6f3b-4a9e-8d1f-5a3e1c9b7a4f",
-      guestName: "Helen Pisquy y Sr.",
-      guestNumber: 2,
+        uuid: "d2b48ba7-87af-4b1a-9c1f-35d757bc762e",
+        guestName: "Sr. Carlos Sarat y Sra.",
+        guestNumber: 2
     },
     {
-      uuid: "c2a5f9d7-3f1e-4b8d-8a7e-4d6e1b3a5c9f",
-      guestName: "Sr. Orlando Lopez y Sra.",
-      guestNumber: 1,
+        uuid: "933b4d1a-7157-4e9b-80cd-6e5a4c14bfe6",
+        guestName: "Sr. Orlando Lopez y Sra.",
+        guestNumber: 2
     },
     {
-      uuid: "d8f2b1a3-4e6f-4a9d-8d1e-2f5c3e9b6a7e",
-      guestName: "Pablo Menchú y Sra.",
-      guestNumber: 2,
+        uuid: "fa0ae9d8-8c00-4a38-8c25-0b03e28240ac",
+        guestName: "Sr. Pablo Menchú y Sra.",
+        guestNumber: 2
     },
     {
-      uuid: "e9a2c3b7-5f4e-4d8a-9d7e-1f6d8e3c2b4f",
-      guestName: "Sr. Victor Arango y Sra.",
-      guestNumber: 2,
+        uuid: "f5d287f8-6109-4daa-b7ba-884fcd2afe31",
+        guestName: "Sr. Victor Arango y Sra.",
+        guestNumber: 2
     },
     {
-      uuid: "f1d3e8b4-7a5c-4b9d-8f1e-3a6d2b4c5f7e",
-      guestName: "Fredy Alvarez",
-      guestNumber: 2,
+        uuid: "b0fdd4a9-c8a9-4dc2-8ee3-73299bea5edb",
+        guestName: "Sr. Fredy Alvarez Sra. e hijos",
+        guestNumber: 0
     },
     {
-      uuid: "a6e3d5b1-4f8c-4a9e-9f7e-2d5b1c3e8a9f",
-      guestName: "Srita Andrea Gonzalez",
-      guestNumber: 1,
+        uuid: "c1ed058f-902d-4f4a-8948-cf7429e0c73f",
+        guestName: "Sr. Miguel Gomez y Sra.",
+        guestNumber: 2
     },
     {
-      uuid: "b2f5e9d1-6b3e-4d8f-9a1c-7d5f3e2a9b4c",
-      guestName: "Joven Walter Hidaldo",
-      guestNumber: 1,
+        uuid: "d11b7e72-073b-4e8a-8c35-566cdadedea8",
+        guestName: "Joven Walter Hidaldo",
+        guestNumber: 1
     },
     {
-      uuid: "e4b9d3a7-2f5c-4a9e-8d7f-1f3e6b2c9a4f",
-      guestName: "Yony Alvarez",
-      guestNumber: 2,
+        uuid: "5046ce3e-bea6-464c-8222-4fa288322448",
+        guestName: "Sr. Yony Alvarez y Sra.",
+        guestNumber: 2
     },
     {
-      uuid: "f6d2b5e1-4a3e-4c8f-8d9a-7e1b9f3c2d5f",
-      guestName: "Luis -Verito Macario",
-      guestNumber: 2,
+        uuid: "26cce306-253a-4b22-8705-5dcd6a0e095c",
+        guestName: "Sr. Luis Alvarez y Sra.",
+        guestNumber: 2
     },
     {
-      uuid: "a7c8d3e1-5b4e-4a9d-8f2e-3b6d5c2f7e9a",
-      guestName: "Rocio Lemuz",
-      guestNumber: 2,
+        uuid: "98cf8850-84c5-4633-92d9-1a555e5a2464",
+        guestName: "Sr. Andy Molina Sra. e hijo",
+        guestNumber: 0
     },
     {
-      uuid: "b8d9e3a2-4c1e-4b8f-9a7d-6e2f5c1d8b3f",
-      guestName: "Sofia Gática",
-      guestNumber: 1,
+        uuid: "6191d4c2-8936-49eb-bac0-2bd4dd0dfa19",
+        guestName: "Srta. Sofia Gática",
+        guestNumber: 1
     },
     {
-      uuid: "c9e1d2f7-3a5c-4d9e-8b1f-2f3b4e6a7c9d",
-      guestName: "Karin Bethancourt",
-      guestNumber: 1,
+        uuid: "4540393c-07cc-4698-a802-b89885b5e591",
+        guestName: "Srta. Karin Bethancourt",
+        guestNumber: 1
     },
     {
-      uuid: "d1f3e4b9-7a8c-4b1d-9f2e-6c5d3e2a4f9b",
-      guestName: "Sofia Arreola",
-      guestNumber: 1,
+        uuid: "560b0808-16a5-47e4-8011-beb586ed0534",
+        guestName: "Srta. Sofia Arreola",
+        guestNumber: 1
     },
     {
-      uuid: "e2f4c1b3-6d9a-4a8e-9f1e-3c7d5b6e2a4c",
-      guestName: "Roxana Cocinero",
-      guestNumber: 2,
+        uuid: "d0237f57-42d4-4ac8-aacf-87c4fbfff391",
+        guestName: "Sr. Angel González Sra. e hijo",
+        guestNumber: 0
     },
     {
-      uuid: "f3b5e6d2-4c1f-4a9d-8b7e-2d5c3f9a6b4e",
-      guestName: "Jennifer Figueroa",
-      guestNumber: 1,
+        uuid: "1511feb1-8bd7-4fad-979e-5f370f78b73e",
+        guestName: "Srta. Jennifer Figueroa",
+        guestNumber: 1
     },
     {
-      uuid: "a4c9d2e3-5b8a-4d1e-8f9c-7b3e2f6d1a9f",
-      guestName: "Mario Reyes",
-      guestNumber: 1,
+        uuid: "7efd2b16-6e75-4930-bdb7-c05e2191c1fb",
+        guestName: "Mario Reyes",
+        guestNumber: 1
     },
     {
-      uuid: "b5e8d3a7-2f9c-4a1d-8e7b-3d6f2a9e5c1b",
-      guestName: "Elian Barrios",
-      guestNumber: 1,
-    },
+        uuid: "5becec9f-3fa4-4848-bcd6-e6cfd8b783ba",
+        guestName: "Elian Barrios",
+        guestNumber: 1
+    }
   ];
 
   public findGuestByUuid(uuid: string|null): Guest {
@@ -200,7 +190,7 @@ export class GuestService {
       guestName: "Para ti",
       guestNumber: 1,
     };
-    
+
     if(!uuid) return defaultGuest;
 
     return this.guests.find((guest) => guest.uuid === uuid) || defaultGuest;

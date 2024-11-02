@@ -34,7 +34,7 @@ import { RouterTestingModule } from "@angular/router/testing";
     InvitationCardComponent,
     PresentsTableComponent,
     YouTubePlayer,
-    RouterTestingModule
+    // RouterTestingModule
   ],
   templateUrl: "./invitation-card.component.html",
   styleUrl: "./invitation-card.component.css",
@@ -59,9 +59,10 @@ export class InvitationCardComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {   
-    this.route.queryParamMap.subscribe(params => {
-      this.guestId = params.get('guestId');
-      console.log(this.guestId);
+    
+    this.route.params.subscribe(params => {
+      
+      this.guestId = params['guestId'];
       const guest = this.guestService.findGuestByUuid(this.guestId);
       this.guest = guest.guestName;
       this.guestNumber = guest.guestNumber;
@@ -102,36 +103,27 @@ export class InvitationCardComponent implements OnInit, AfterViewInit {
   }
 
   youtubeReady(e:any) {
-    console.log( "e.target.videoTitle=", e.target.videoTitle)
     e.target.playVideo();
   }
  public videoId = "rjwWadSKVxc";
  public start = 10;
   OnStageChange(e:any) {
 
-    console.log( e )
-    console.log( "OnStageChange: data=", e.data, e.target.videoTitle )
     switch( e.data ) {
       case -1:
-        console.log("code -1")
         break;
       case 0:
-        console.log("End of Song")
         this.videoId = "rjwWadSKVxc"
         e.target.playVideo() ;
         break;
       case 1:
-        console.log("Code 1")
         break;
       case 3:
-        console.log("Code 3")
         break;
       case 5:
-        console.log("code 5, start next video: ", e.target.videoTitle)
         e.target.playVideo();
         break;
       default: {
-        console.error( "OnStageChange for youtube: unkown data: ", e.data)
         break;
       }
     }

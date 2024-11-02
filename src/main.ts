@@ -7,8 +7,9 @@ import { ConfirmationComponent } from "./app/confirmation/attendance-confirmatio
 import { InvitationComponent } from "./app/invitation/invitation.component";
 import { LocationComponent } from "./app/location/location.component";
 import { InvitationCardComponent } from "./app/invitation-card/invitation-card.component";
-import { RouterModule } from "@angular/router";
-import { AppRoutingModule } from "./app.routing";
+import { RouterModule, RouterOutlet, provideRouter } from "@angular/router";
+import {  routes } from "./app.routes";
+import { provideHttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-root",
@@ -21,10 +22,12 @@ import { AppRoutingModule } from "./app.routing";
     InvitationComponent,
     LocationComponent,
     InvitationCardComponent,
+    RouterOutlet
   ],
   template: `
     <div class="wedding-page">
-      <app-invitation-card></app-invitation-card>
+      <router-outlet></router-outlet>
+      <!-- <app-invitation-card></app-invitation-card> -->
       <!-- <app-header></app-header>
       <app-invitation></app-invitation>
       <app-info></app-info>
@@ -43,4 +46,9 @@ import { AppRoutingModule } from "./app.routing";
 })
 export class App {}
 
-bootstrapApplication(App, { providers: [AppRoutingModule] });
+bootstrapApplication(App,{
+  providers: [
+    provideRouter(routes),
+    provideHttpClient()
+  ]
+});
