@@ -241,7 +241,7 @@
   padding: calc(600px + 4rem) 0 4rem;
   opacity: 0;
   transition: opacity 0.5s ease;
-  transition-delay: 1s;
+  transition-delay: 
 }
 
 .pulled .paper-content {
@@ -281,7 +281,7 @@
   }
 
   .tassel-threads {
-    width: 50px;
+    width: 36px;
   }
 }
 
@@ -301,13 +301,13 @@
 }
 
 .pull-tab:hover .tassel {
-  transform: scaleY(1.4); /* Esto aumentará el tamaño hacia abajo en 40% */
-  transform-origin: top; /* Hace que el crecimiento sea hacia abajo */
-  transition: transform 0.3s ease; /* Transición suave */
+  transform: scaleY(1.4); 
+  transform-origin: top;
+  transition: transform 0.3s ease; 
 }
 
 .pull-tab:hover .tassel-knot {
-  transform: translateY(14px); /* Activa el movimiento */
+  transform: translateY(14px); 
   height: 80px;
 }
 

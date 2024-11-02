@@ -6,16 +6,12 @@ header {
   text-align: center;
 }
 
-/* h1 {
-  margin-bottom: 20px;
-} */
-
 .names-header {
   margin-bottom: 20px;
 }
 
 .names-header h1 {
-  font-size: 4vw; /* Usamos vw para que el tamaño de fuente sea adaptable */
+  font-size: 4vw; 
   margin: 0;
   margin-top: -20px;
 }
@@ -23,34 +19,51 @@ header {
 .names-wedding {
   text-align: center;
   position: absolute;
-  top: 30vh; /* Usamos vh para que la posición sea proporcional a la altura de la pantalla */
+  top: 30vh; 
   width: 100%;
 }
 
 @media (max-width: 768px) {
   header {
-    height: 80vh; /* Reducimos la altura para pantallas medianas */
+    height: 80vh; 
   }
 
   .names-header h1 {
-    font-size: 7vw; /* Ajustamos el tamaño de fuente para pantallas medianas */
+    font-size: 5vw; 
   }
 
   .names-wedding {
-    top: 25vh; /* Ajustamos la posición del texto */
+    top: 25vh; 
   }
 }
 
 @media (max-width: 480px) {
   header {
-    height: 70vh; /* Reducimos aún más la altura para pantallas pequeñas */
+    height: 70vh; 
   }
 
   .names-header h1 {
-    font-size: 10vw; /* Reducimos el tamaño de fuente para pantallas pequeñas */
+    font-size: 10vw; 
   }
 
   .names-wedding {
-    top: 25vh; /* Ajustamos la posición del texto */
+    top: 25vh; 
   }
+}
+
+
+
+.section {
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 5s ease-in-out; 
+}
+
+.section.fade-in {
+  opacity: 1;
+}
+
+canvas {  
+  position: absolute;  
 }

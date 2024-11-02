@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {
   trigger,
   state,
@@ -14,6 +14,9 @@ import { InfoComponent } from "../info/info.component";
 import { InvitationComponent } from "../invitation/invitation.component";
 import { LocationComponent } from "../location/location.component";
 import { PresentsTableComponent } from "../presents-table/presents-table.component";
+import { YouTubePlayer } from "@angular/youtube-player";
+import { Fireworks } from 'fireworks-js';
+
 
 @Component({
   selector: "app-invitation-card",
@@ -28,6 +31,7 @@ import { PresentsTableComponent } from "../presents-table/presents-table.compone
     LocationComponent,
     InvitationCardComponent,
     PresentsTableComponent,
+    YouTubePlayer,
   ],
   templateUrl: "./invitation-card.component.html",
   styleUrl: "./invitation-card.component.css",
@@ -41,45 +45,25 @@ import { PresentsTableComponent } from "../presents-table/presents-table.compone
   //   ])
   // ]
 })
-export class InvitationCardComponent implements OnInit {
+export class InvitationCardComponent implements OnInit, AfterViewInit {
 
-  private player: any; // El reproductor de YouTube
-
-  ngOnInit() {
-    // Inicializa el reproductor de YouTube cuando se carga la página
-    this.loadYouTubePlayer();
+  fireworks: Fireworks | null = null;
+  ngAfterViewInit() {
+    const headerElement = document.querySelector('.section');
+    headerElement?.classList.add('fade-in');
+    
   }
 
-  loadYouTubePlayer() {
-    // Espera a que se cargue la API de YouTube
-    (window as any).onYouTubeIframeAPIReady = () => {
-      this.player = new (window as any).YT.Player('youtube-player', {
-        height: '110px', // Oculta el video
-        width: '110px', // Oculta el video
-        videoId: 'OpLpphS7VZY', // Reemplaza con el ID del video que quieres reproducir
-        events: {
-          onReady: (event: any) => event.target.playVideo(),
-        },
-        playerVars: {
-          autoplay: 1, // Autoplay
-          controls: 0, // Sin controles
-          showinfo: 0, // Sin información del video
-          modestbranding: 1, // Sin marca de YouTube
-          loop: 1, // Repetir el video
-          playlist: 'OpLpphS7VZY', // Necesario para el loop
-          fs: 0, // Sin botón de pantalla completa
-          cc_load_policy: 0, // Sin subtítulos
-          iv_load_policy: 3, // Sin anotaciones
-          disablekb: 1 // Desactivar controles del teclado
-        }
-      });
-    };
+  ngOnInit() {   
+   
   }
 
   isOpen = false;
 
   openCard() {
+    
     this.isOpen = true;
+    
     setTimeout(() => {
       const headerElement = document.querySelector("app-header");
       if (headerElement) {
@@ -102,5 +86,43 @@ export class InvitationCardComponent implements OnInit {
       this.triangle.nativeElement.classList.remove("hovered");
       this.eyelet.nativeElement.classList.remove("hovered");
     }
+
   }
+
+  youtubeReady(e:any) {
+    console.log( "e.target.videoTitle=", e.target.videoTitle)
+    e.target.playVideo();
+  }
+ public videoId = "rjwWadSKVxc";
+ public start = 10;
+  OnStageChange(e:any) {
+
+    console.log( e )
+    console.log( "OnStageChange: data=", e.data, e.target.videoTitle )
+    switch( e.data ) {
+      case -1:
+        console.log("code -1")
+        break;
+      case 0:
+        console.log("End of Song")
+        this.videoId = "rjwWadSKVxc"
+        e.target.playVideo() ;
+        break;
+      case 1:
+        console.log("Code 1")
+        break;
+      case 3:
+        console.log("Code 3")
+        break;
+      case 5:
+        console.log("code 5, start next video: ", e.target.videoTitle)
+        e.target.playVideo();
+        break;
+      default: {
+        console.error( "OnStageChange for youtube: unkown data: ", e.data)
+        break;
+      }
+    }
+  }
+
 }
