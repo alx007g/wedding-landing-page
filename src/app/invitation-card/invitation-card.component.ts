@@ -54,8 +54,8 @@ export class InvitationCardComponent implements OnInit {
     // Espera a que se cargue la API de YouTube
     (window as any).onYouTubeIframeAPIReady = () => {
       this.player = new (window as any).YT.Player('youtube-player', {
-        height: '0', // Oculta el video
-        width: '0', // Oculta el video
+        height: '110px', // Oculta el video
+        width: '110px', // Oculta el video
         videoId: 'OpLpphS7VZY', // Reemplaza con el ID del video que quieres reproducir
         events: {
           onReady: (event: any) => event.target.playVideo(),
