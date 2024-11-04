@@ -16,6 +16,11 @@ export class GuestService {
         guestName: "Lesster Escalante",
         guestNumber: 1,
       },
+    {
+        uuid: "d2f3f4a5-1bfb-7a77-8df7-3e4e3d3a0b1e",
+        guestName: "Hector Hernandez y Sra.",
+        guestNumber: 1,
+      },
       {
         uuid: "d2f2f2a3-6bfb-4a88-8df7-3e4e3d3a0b1e",
         guestName: "Kevin Itzep",
