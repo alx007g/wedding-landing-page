@@ -14,7 +14,7 @@ export class GuestService {
     {
         uuid: "d7f7f7a9-3bfb-4a88-1df2-7e4e3d3a0b1e",
         guestName: "Danilo Soc & Sra.",
-        guestNumber: 1,
+        guestNumber: 2,
       },
       {
         uuid: "d3f2f1a1-1bfz-1a11-8df7-3e4e3d3a0b1e",
